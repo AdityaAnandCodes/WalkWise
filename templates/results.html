@@ -15,7 +15,7 @@
                                 <img src="{{ cover.image }}" class="card-img-top" alt="{{ cover.title }}">
                                 <div class="card-body">
                                     <h5 class="card-title text-dark">{{ cover.title }}</h5>
-                                    <p class="card-text text-dark"><span class="canceled-price">Rs.1,299.00</span> {{ cover.price }}</p>
+                                    <p class="card-text text-dark"><span class="canceled-price">${{0.62*cover.price}}</span> {{ cover.price }}</p>
                                     </a>
                                     <p></p>
                                     {% if cover.quantity > 0 %}

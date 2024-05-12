@@ -1,0 +1,37 @@
+{% include "header.html" %}
+<body>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 5ce665df23bbe16d5e25bf3ec5d328dd991efe71
+    <div class="container">
+        <h1 class="comments-head">Search Results</h1>
+        {% if results %}
+            <div class="row g-4">
+                {% for cover in results %}
+                    <div class="col-md-6 col-lg-3 col-sm-6">
+                        <a href="{{url_for('cover_detais', cover_id=cover.id)}}" class="text-decoration-none">
+                            <div class="card">
+                                <img src="{{ cover.image }}" class="card-img-top" alt="{{ cover.title }}">
+                                <div class="card-body">
+                                    <h5 class="card-title text-dark">{{ cover.title }}</h5>
+                                    <p class="card-text text-dark"><span class="canceled-price">Rs.1,299.00</span> {{ cover.price }}</p>
+                                    </a>
+                                    <p></p>
+                                    {% if cover.quantity > 0 %}
+                                    <a >
+                                        <a href="{{url_for('add_to_cart', cover_id=cover.id)}}" class="btn btn-dark">Add to Cart</a>
+                                    </a>
+                                 {% else %}
+                                <p class="text-danger">Sold Out</p>
+                                {% endif %}
+                                </div>
+                            </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+        <p>No results found for '{{ query }}'</p>
+    </div>
+    {% endif %}
+{% include "footer.html" %}

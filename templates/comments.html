@@ -1,0 +1,36 @@
+{% include "header.html" %}
+<body>
+  <div class="container">
+    <h3 class="comments-head">Customer Reviews</h3>
+    <div class="comments-section">
+      {% for user in users %} {% if user.comments %} {% for comment in
+      user.comments %}
+      <div class="comment-box">
+        <h4>{{ user.name }}</h4>
+        <p>{{ comment.text }}</p>
+      </div>
+      {% endfor %} {% endif %} {% endfor %} {% if current_user.is_authenticated
+      %} {%if not current_user.comments%}
+      <div class="comment-form-box">
+        <h3>Add Your Comment</h3>
+        <form action="/reviews" method="post" enctype="multipart/form-data">
+          <label for="userComment">Your Comment:</label>
+          <textarea
+            class="comment-area"
+            id="userComment"
+            name="userComment"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit" class="comment-button">Submit Comment</button>
+        </form>
+      </div>
+      {% else %}
+      <p>You have already submitted a comment.</p>
+      {% endif %} {% else %}
+      <p>You need to be logged in to comment</p>
+      {% endif %}
+    </div>
+  </div>
+  {%include "footer.html" %}
+</body>

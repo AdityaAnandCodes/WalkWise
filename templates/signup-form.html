@@ -1,0 +1,127 @@
+{% include "header.html" %}
+
+<div class="sign-up-page">
+  <div class="row sign-up-grid">
+    <div class="col-md-6 sign-up-img rounded-start-2 shadow">
+      <!-- <img src="andres-jasso-PqbL_mxmaUE-unsplash.jpg" class="img-fluid" /> -->
+    </div>
+    <div class="col-md-6 --- rounded-end-2 shadow">
+      <div class="modal-header pt-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-2 px-5">Sign up for free</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body p-5 pt-0">
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for
+        message in messages %}
+        <p class="flashee">{{message}}</p>
+        {% endfor %} {% endif %} {% endwith %}
+        <form action="/signup" method="post" class="">
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control rounded-3"
+              id="floatingInput"
+              placeholder="Ibiza123@xy"
+              name="username"
+              required
+            />
+            <label class="text-body-emphasis" for="username">Username</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control rounded-3"
+              id="floatingInput"
+              placeholder="name@example.com"
+              name="email"
+              required
+            />
+            <label class="text-body-emphasis" for="username">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control rounded-3"
+              id="floatingPassword"
+              placeholder="Password"
+              name="password"
+              required
+            />
+            <label class="text-body-emphasis" for="floatingPassword">Password</label>
+          </div>
+          <div class="container justify-content-start mx-2 align-items-center">
+            <div class="position-relative">
+              <input
+                class="form-check-input position-absolute top-50 end-0 me-3 fs-5"
+                type="radio"
+                name="role"
+                id="admin"
+                value=""
+                required
+              />
+              <label class="list-group-item py-3 pe-5" for="admin">
+                <strong class="fw-semibold">Seller</strong>
+                <span class="d-block small opacity-75">Sign Up as Seller</span>
+              </label>
+              </div>
+            <div class="position-relative">
+              <input
+                class="form-check-input position-absolute top-50 end-0 me-3 fs-5"
+                type="radio"
+                name="role"
+                id="customer"
+                value="customer"
+                checked=""
+                required
+              />
+              <label class="list-group-item py-3 pe-5" for="customer">
+                <strong class="fw-semibold">Customer</strong>
+                <span class="d-block small opacity-75"
+                  >Sign Up as Customer</span
+                >
+              </label>
+            </div>
+          </div>
+
+          <button
+            class="w-100 mb-2 btn btn-lg rounded-3 primary-btn"
+            type="submit"
+          >
+            Sign up
+          </button>
+          <small class=""
+            >By clicking Sign up, you agree to the terms of use.</small
+          >
+          <hr class="my-4" />
+          <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+          <button
+            class="w-100 py-2 mb-2 btn outline-btn rounded-3"
+            type="submit"
+          >
+            <svg class="bi me-1" width="16" height="16">
+              <use xlink:href="#facebook"></use>
+            </svg>
+            Sign up with Facebook
+          </button>
+          <button
+            class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3"
+            type="submit"
+          >
+            <svg class="bi me-1" width="16" height="16">
+              <use xlink:href="#github"></use>
+            </svg>
+            Sign up with GitHub
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}

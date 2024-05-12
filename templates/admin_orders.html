@@ -1,0 +1,44 @@
+{% include "header.html" %}
+<body>
+<div class="container">
+    <h1>Admin Orders</h1>
+</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Customer Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Covers Ordered</th> <!-- Updated header -->
+                <th>Payment Type</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+                <tr>
+                    <td>{{ order.id }}</td>
+                    <td>{{ order.date }}</td>
+                    <td>{{ order.name }}</td>
+                    <td>{{ order.email }}</td>
+                    <td>{{ order.phone_number }}</td>
+                    <td>{{ order.address1 }}, {{ order.address2 }}, {{ order.town_city }}, {{ order.state }}, {{ order.country }}, {{ order.pincode }}</td>
+                    <td>{{ order.cover_title }} {{ order.phone_model }}: {{ order.cover_quantity }} </td>
+                    <td>{{ order.payment_type }}</td>
+                    <td>
+                        Out for delivery
+                        <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                        </label>
+                    </td> <!-- Add logic for order status -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% include "footer.html" %}
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<div class="container-fluid" style="padding-left: 50px;
+    padding-right: 50px;">
+<!--  <h1 class="cart-head">Your Cart</h1>-->
+  <div class="row gap-3 card-grid">
+    <div class="col-9 cart-table" style="background-color: #343434;
+  border-radius: 8px;">
+      {% if items %}
+      <table class="container-fluid table-head" style="border-spacing: 0 20px;">
+        <thead>
+          <tr class="table-row" style="border-bottom: 0.5px solid #707070;">
+            <th class="first-space" style="margin-bottom: 40px;">Items</th>
+            <th>Title</th>
+            <th>Company</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+          <tr class="table-row" style="margin-bottom: 40px;">
+            <td class="first-space" style="margin-left: 10px;
+  padding-left: 10px;">
+              <a
+                href="{{url_for('cover_detais', cover_id=item['cover'].id)}}"
+                class="text-decoration-none text-light"
+              >
+                <img
+                  src="{{ item['cover'].image }}"
+                  alt="{{ item['cover'].model }}"
+                  class="cart-image" style="height: 150px;
+  width: 210px;
+  object-fit: cover;"
+                />
+              </a>
+            </td>
+            <td>{{ item['cover'].title }}</td>
+            <td>{{ item['cover'].model }}</td>
+            <td>{{ item['cover_quantity'] }}</td>
+            <td>{{ item['cover'].price }}</td>
+            <td>
+              <a
+                href="{{url_for('delete_cover', cover_id=item['cover'].id)}}"
+                class="text-danger"
+                title="Remove from Cart"
+                >×</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-2 summary">
+      <h4 class="my-4">Summary</h4>
+      <p class="cart-total" style="margin-left: 5px;
+  font-size: 19px;
+  font-weight: normal;">
+        <span class="total-text">Total: </span>
+        ${{ total }}
+      </p>
+<!--      <a-->
+<!--        href="{{url_for('checkout')}}"-->
+<!--        class="btn outline-btn my-4"-->
+<!--        id="cart-checkout"-->
+<!--        >Checkout</a-->
+<!--      >-->
+<!--      <form action="{{url_for('get_pdf')}}" method="post" >-->
+<!--          <button type="submit" class="btn btn-info">Get PDF</button>-->
+<!--      </form>-->
+<!--      {% else %}-->
+<!--      <p class="cart-no-item">Your cart is empty.</p>-->
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,507 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  color: white;
+  background-color: #111111;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+.brand-logo {
+  margin-left: 34px;
+  width: 74px;
+  height: 74px;
+  transition: all 0.3s ease-in-out;
+}
+
+.brand-logo:hover,.brand-logo:focus {
+  margin-left: 34px;
+  transform: scale(1.2);
+}
+
+.nav-link {
+  color: #790bf4;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #696969;
+}
+.nav-link:active {
+  color: #343434;
+}
+
+.link-secondary {
+  color: #343434;
+}
+.link-secondary:hover,
+.link-secondary:active {
+  color: #760fe9;
+}
+.link-secondary:active {
+  color: #696969;
+}
+
+.outline-btn {
+  outline-color: #790bf4;
+  border-color: #790bf4;
+  color: #fff;
+}
+
+.outline-btn:hover,
+.outline-btn:focus {
+  background-color: #790bf4;
+  outline-color: #790bf4;
+  border-color: #790bf4;
+  color: #000;
+}
+
+.outline-btn:active {
+  background-color: #760fe9;
+  border-color: #760fe9;
+  color: #696969;
+}
+
+.primary-btn {
+  background-color: #790bf4;
+  border-color: #790bf4;
+  color: #fff;
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+  background-color: #760fe9;
+  border-color: #760fe9;
+  color: #000;
+}
+
+.primary-btn:active {
+  background-color: #797979;
+  border-color: #797979;
+  color: #444;
+}
+
+.fi {
+  color: #fff;
+  font-size: 24px;
+}
+
+.footer {
+  margin-top: 100px;
+}
+
+.landing-body {
+  background-image: url("./maksim-larin-NOpsC3nWTzY-unsplash.jpg");
+  background-size: cover;
+  color: #fff;
+}
+
+/* Home Page Design */
+.form-control:focus,
+.form-control:active {
+  border-color: #760fe9;
+  box-shadow: 0 0 3px #760fe9;
+}
+
+[type="search"]::-webkit-search-cancel-button {
+  color: #696969;
+  background-color: #343434;
+}
+
+.s-bar {
+  z-index: 3;
+}
+
+.home-head {
+  margin: 15px;
+  padding: 5px;
+}
+.card {
+  /* position: relative; */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+/* .item {
+  height: 200px;
+  object-fit: cover;
+} */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 576px) {
+  .container-fluid {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .home-heading {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 50px;
+    font-size: 25px;
+    font-weight: 400;
+    border-bottom: 2px solid #ff6666;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-top: 1rem;
+  }
+}
+
+.pagination {
+  margin: 20px;
+  padding: 80px;
+}
+
+/* About Me Page */
+
+.custom-container {
+  margin-top: 40px;
+}
+
+.profile-img {
+  transition: all 0.4s ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+  margin: 15px;
+}
+
+/* sign up page */
+
+.sign-up-grid {
+  width: 900px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #343434;
+}
+
+.sign-up-page {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-up-img {
+  /* fill: aquamarine; */
+  background-color: black;
+  background-image: url("../andres-jasso-PqbL_mxmaUE-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* login page */
+
+.log-in-grid {
+  width: 900px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #343434;
+}
+
+.log-in-page {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-in-img {
+  background-color: black;
+  background-image: url("../vladimir-yelizarov-RlDOPY6rBa0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Comment Section */
+
+.comments-head {
+  border-bottom: 2px solid #6a6b70;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  padding-top: 1rem;
+}
+
+.comments-section {
+  background-color: #444;
+
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(243, 241, 241, 0.1);
+}
+
+.comment-box {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #222222;
+  border-radius: 8px;
+}
+
+.comment-area {
+  background-color: #222222;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.comment-box h4 {
+  margin-top: 0;
+}
+
+.comment-box p {
+  margin-bottom: 0;
+}
+
+.comment-form-box {
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.comment-form-box label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.comment-form-box input,
+.comment-form-box textarea,
+.comment-form-box button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+.comment-button {
+  background-color: black;
+  color: white;
+  border-color: none;
+  border-radius: 8px;
+}
+
+/* cart page */
+
+.cart-head {
+  border-bottom: 2px solid #6a6b70;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  padding-top: 1rem;
+}
+
+.cart-image {
+  height: 150px;
+  width: 210px;
+  object-fit: cover;
+}
+.table-row {
+  border-bottom: 0.5px solid #707070;
+}
+.table-head {
+  border-spacing: 0 20px;
+}
+
+.table-row td {
+  margin-bottom: 40px;
+}
+
+.first-space {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.cart-table {
+  /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2); */
+  background-color: #343434;
+  border-radius: 8px;
+}
+.cart-grid {
+  margin: 5px;
+}
+.summary {
+  /* box-shadow: 0.1 0.1 0.1 rgba(255, 255, 255, 0.75); */
+  border-radius: 8px;
+  background-color: #343434;
+  height: fit-content;
+}
+.cart-total {
+  margin-left: 5px;
+  font-size: 19px;
+  font-weight: normal;
+}
+.total-text {
+  font-weight: bold;
+}
+#cart-checkout {
+  margin-left: 5 px;
+}
+.cart-no-item {
+  margin: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .table {
+    font-size: 14px;
+  }
+  .cart-image {
+    max-width: 60px;
+  }
+}
+
+.custom-profile-img {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+.custom-about-me-text {
+  margin-top: 20px;
+}
+
+.comment-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flashee {
+  color: red;
+  margin: 10px;
+}
+
+/* add item page */
+
+.add-item-img {
+  background-color: black;
+  background-image: url("../usama-akram-kP6knT7tjn4-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Radio button */
+
+.form-check-input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none; /* Remove the outline */
+  box-shadow: none; /* Remove the shadow */
+  border: none; /* Remove the border */
+}
+.form-check-input[ type="radio"]:checked{
+  background-color: #760fe9;
+  border: none;
+}
+.form-check-input[ type="radio"]:checked:active{
+  background-color: #760fe9;
+<<<<<<< HEAD
+
+=======
+  
+>>>>>>> 5ce665df23bbe16d5e25bf3ec5d328dd991efe71
+  border: none;
+}
+.form-check-input[ type="radio"]:checked::before{
+  background-color: #760fe9;
+  border: none;
+}
+
+/* checkout cart page */
+
+.checkout-cart-heading{
+  color: #760fe9;
+}
+.badge{
+  background-color: #760fe9;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #696969;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #790bf4;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #696969;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.parallax {
+  background-image: url("../parallax1.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

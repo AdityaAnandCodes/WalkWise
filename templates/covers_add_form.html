@@ -1,0 +1,84 @@
+{% include "header.html" %}
+<body>
+  <div class="sign-up-page">
+    <div class="row sign-up-grid">
+      <div class="col-md-6 add-item-img rounded-start-2 shadow">
+        <!-- <img src="andres-jasso-PqbL_mxmaUE-unsplash.jpg" class="img-fluid" /> -->
+      </div>
+      <div class="col-md-6 rounded-end-2 shadow">
+        <div class="container">
+          <div class="modal-header pt-4 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2 px-3">Add Item</h1>
+            <button
+              type="button"
+              class="btn-close px-5"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form action="/add_cover" method="post" enctype="multipart/form-data">
+            <div class="form-floating mb-4">
+              <input
+                class="form-control rounded-3"
+                type="text"
+                id="floatingInput"
+                name="title"
+                placeholder="Enter title"
+              />
+              <label class="text-body-emphasis" for="title">Title</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input
+                class="form-control rounded-3"
+                type="text"
+                id="floatingInput"
+                name="price"
+                placeholder="Enter Price"
+              />
+              <label class="text-body-emphasis" for="price">Price</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input
+                class="form-control rounded-3"
+                type="text"
+                id="Company"
+                name="phoneName"
+                value=""
+                placeholder="Enter Company Name"
+              />
+              <label class="text-body-emphasis" for="Company">Company</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input
+                class="form-control rounded-3"
+                type="file"
+                id="floatingInput"
+                name="image"
+                placeholder="Enter image url"
+              />
+             <label class="text-body-emphasis" for="image">Image</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input
+                class="form-control rounded-3"
+                type="number"
+                id="floatingInput"
+                name="quantity"
+                placeholder="Enter Quantity (int)"
+              />
+              <label class="text-body-emphasis" for="quantity">Quantity</label>
+            </div>
+            <button
+              class="w-100 mb-5 btn btn-lg rounded-3 primary-btn"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include "footer.html" %}
+</body>

@@ -1,6 +1,8 @@
 # WalkWise
 
-WalkWise is a shoe-selling website implemented using HTML, CSS, and JavaScript for the frontend, and Flask for the backend. The frontend design, including the choice of brand color/accent, other colors, and fonts, was meticulously curated to match the website's personality and enhance user experience. The backend development, handled by a teammate, utilized Flask for its flexibility and ease of use.
+WalkWise is a shoe-selling website implemented using HTML, CSS, and JavaScript for the frontend, and Flask for the backend. The frontend design, including the choice of brand color/accent, other colors, and fonts, was meticulously curated to match the website's personality and enhance user experience. The backend development, handled by a teammate, utilized Flask for its flexibility and ease of use.  
+
+The Website is live on  - https://walkwise-8eon.onrender.com/
 
 
 

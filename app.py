@@ -78,6 +78,7 @@ csp = {
         '*',
         'https://res.cloudinary.com/dh6qnpost/',
         'https://images.unsplash.com/',
+      '{{ url_for("static", filename="script.js") }}'
         
     ],
     'media-src': ['\'self\'', 'https://res.cloudinary.com/dh6qnpost/'],

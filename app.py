@@ -294,7 +294,7 @@ def cover_detais(cover_id):
     results = db.session.execute(db.select(User).order_by(User.name))
     users = results.scalars().all()
     cover = db.get_or_404(Covers, cover_id)
-    cancelled_price=int(cover.price)*10
+    cancelled_price=int(cover.price)*0.62 + int(cover.price)
     return render_template("cover_details.html", cover=cover, users=users, cancelled_price=cancelled_price)
 
 

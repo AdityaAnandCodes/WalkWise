@@ -23,7 +23,7 @@
                              <img  src="{{ cover.image }}" class="card-img-top" alt="{{ cover.title }}">
                             <div class="card-body">
                                 <h5 class="card-title text-dark">{{ cover.title }}</h5>
-                                <p class="card-text text-dark">${{ cover.price }}</p>
+                                <p class="card-text text-dark"><span class="canceled-price">$ 999.00</span>${{ cover.price }}</p>
                                 </a>
                                 {% if cover.quantity > 0 %}
                                     <a >

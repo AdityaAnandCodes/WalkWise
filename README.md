@@ -57,7 +57,7 @@ The Website is live on  - https://walkwise-8eon.onrender.com/
 
 5. Access the application at http://localhost:5000
    
-   Incase of errors make sure all the modules that need to be imported are already imported if not manually import them using pip install.
+   Incase of errors make sure all the modules that need to be imported are already imported if not manually import them using pip install command.
 
 
 
